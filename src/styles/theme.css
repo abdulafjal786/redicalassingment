@@ -1,0 +1,8 @@
+@theme {
+  --color-primary: #2563EB;   /* Blue */
+  --color-secondary: #14B8A6; /* Teal */
+  --color-background: #051937;
+  --color-card-bg: #FFFFFF; /* White */
+  --color-text: #111827;      /* Dark Gray */
+  --color-accent: #F97316;    /* Orange */
+}
