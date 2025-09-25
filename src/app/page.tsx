@@ -82,10 +82,10 @@ const Page = () => {
                     </Link>
                 </section>
             </main>
-
+{/* 
             <div className="lg:hidden fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 w-[90%]">
                 <Button />
-            </div>
+            </div> */}
         </div>
     );
 };
