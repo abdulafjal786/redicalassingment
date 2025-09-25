@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { Calendar, Clock, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -28,12 +28,11 @@ export default function ScheduleSession() {
 
   const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedDate(e.target.value);
+    setShowTimePicker(true)
     setSelectedTime(""); // reset time if date changes
   };
 
-useEffect(() => {
-    setShowTimePicker(true)
-  }, [selectedDate]);
+
 
   const isSlotDisabled = (slot: string) => {
     if (!selectedDate) return false;
