@@ -16,7 +16,6 @@ interface DoctorCardProps {
   time: string;
 }
 
-// Reusable details section
 const DoctorDetails = ({
   expertise,
   gender,
@@ -58,15 +57,15 @@ const DoctorCard = ({
 
   // detect screen size
   useEffect(() => {
-    const checkScreen = () => setIsDesktop(window.innerWidth >= 768); // md breakpoint
+    const checkScreen = () => setIsDesktop(window.innerWidth >= 768);
     checkScreen();
     window.addEventListener("resize", checkScreen);
     return () => window.removeEventListener("resize", checkScreen);
   }, []);
 
   const toggleDetails = () => {
-    if (isDesktop) setExpanded(true); // modal only
-    else setExpanded((prev) => !prev); // toggle expand for mobile
+    if (isDesktop) setExpanded(true); 
+    else setExpanded((prev) => !prev); 
   };
 
   return (
@@ -93,8 +92,6 @@ const DoctorCard = ({
             <SlArrowDown className="text-gray-600" />
           )}
         </button>
-
-        {/* Expand (Mobile only) */}
         {!isDesktop && expanded && (
           <div className="px-4 pb-4 border-t border-gray-200 animate-slideDown">
             <DoctorDetails
@@ -111,21 +108,17 @@ const DoctorCard = ({
           </div>
         )}
       </div>
-
-      {/* Modal (Desktop only) */}
       {isDesktop && expanded && (
         <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
           <div className="rounded-2xl shadow-lg max-w-md w-full p-6 relative 
                           bg-white/50 backdrop-blur-xl border border-white/30">
-            {/* Close Button */}
+          
             <button
               className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
               onClick={() => setExpanded(false)}
             >
               ✕
             </button>
-
-            {/* Header */}
             <div className="flex items-center gap-3 mb-4">
               <div className="w-16 h-16 rounded-full overflow-hidden relative">
                 <Image src={profileImage} alt={doctorName} fill className="object-cover" />
@@ -137,7 +130,6 @@ const DoctorCard = ({
               </div>
             </div>
 
-            {/* Details */}
             <DoctorDetails
               expertise={expertise}
               gender={gender}
@@ -145,7 +137,6 @@ const DoctorCard = ({
               sessionFee={sessionFee}
             />
 
-            {/* CTA */}
             <Link href="/book-session">
               <button className="mt-4 w-full py-2 rounded-lg font-medium text-white bg-gradient-to-r from-[#BBA3E4] to-[#E7A1A0]">
                 Book Now

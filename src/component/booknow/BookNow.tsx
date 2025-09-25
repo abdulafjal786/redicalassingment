@@ -16,7 +16,7 @@ const AppointmentForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    // 🔹 You can add API call here
+  
   };
 
   return (
@@ -26,7 +26,7 @@ const AppointmentForm = () => {
       </h2>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-        {/* Name */}
+   
         <div>
           <label className="block text-sm text-gray-600 mb-1">Full Name</label>
           <input
@@ -40,7 +40,6 @@ const AppointmentForm = () => {
           />
         </div>
 
-        {/* Mobile */}
         <div>
           <label className="block text-sm text-gray-600 mb-1">Mobile Number</label>
           <input
@@ -56,7 +55,6 @@ const AppointmentForm = () => {
           />
         </div>
 
-        {/* Disease */}
         <div>
           <label className="block text-sm text-gray-600 mb-1">Disease / Problem</label>
           <select
@@ -75,7 +73,6 @@ const AppointmentForm = () => {
           </select>
         </div>
 
-        {/* Submit Button */}
         <button
           type="submit"
           className="mt-2 w-full py-3 rounded-lg font-semibold text-white text-sm sm:text-base"

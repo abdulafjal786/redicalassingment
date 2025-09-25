@@ -12,7 +12,6 @@ const NavigationBar = ({title}:Props) => {
     window.history.back();
   };
 
-  // Example array to represent 6 sessions
 
   return (
     <header
@@ -21,9 +20,8 @@ const NavigationBar = ({title}:Props) => {
         background: "linear-gradient(90deg, #B0A4F5 0%, #EDA197 100%)",
       }}
     >
-      {/* Mobile View */}
       <div className="sm:hidden flex flex-col p-4">
-        {/* Back + Title */}
+       
         <div className="flex items-center gap-3">
           <button onClick={handleBack} className="p-1">
             <SlArrowLeft className="text-gray-700 text-lg" />
@@ -31,7 +29,6 @@ const NavigationBar = ({title}:Props) => {
           <h1 className="text-lg font-bold text-gray-800">{title}</h1>
         </div>
 
-        {/* Search + Filter */}
         <div className="flex mt-4">
           <div className="relative bg-white rounded-xl flex-1">
             <input
@@ -50,12 +47,10 @@ const NavigationBar = ({title}:Props) => {
         </div>
       </div>
 
-      {/* Desktop View */}
       <div className="hidden sm:flex items-center justify-between px-6 py-3">
-        {/* Title */}
+      
         <h1 className="text-xl font-bold text-gray-800">{title}</h1>
 
-        {/* Search + Icons */}
         <div className="flex items-center gap-3 flex-1 max-w-xl ml-6">
           <div className="relative flex-1">
             <input
@@ -75,7 +70,6 @@ const NavigationBar = ({title}:Props) => {
           </button>
         </div>
       </div>
-      {/* Doctor List */}
 
 
     </header>

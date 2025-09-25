@@ -21,14 +21,13 @@ const PastSession = ({
     >
       <div className="p-4 flex flex-col">
         <div className="flex items-start justify-between w-full">
-          {/* Left: Time (25%) */}
+    
           <div className="w-1/4">
             <p className="text-gray-800 text-sm font-medium">
               {time || "11:30AM"}
             </p>
           </div>
 
-          {/* Right: Doctor + Previous Session (75%) */}
           <div className="w-3/4 flex flex-col">
             <p className="text-gray-900 text-sm font-semibold">
               {doctorName || "Dr Abdul Afjal"}

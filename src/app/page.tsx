@@ -14,14 +14,12 @@ const Page = () => {
     return (
         <div className="w-full min-h-screen flex flex-col bg-gradient-to-b from-purple-100 to-pink-100">
 
-            {/* Dashboard Header */}
             <header>
                 <Dashboard />
             </header>
 
             <main className="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-6 p-4 md:p-8">
 
-                {/* Upcoming Sessions */}
                 <section className="space-y-4" aria-labelledby="upcoming-sessions">
                     <h2 id="upcoming-sessions" className="text-sm font-bold text-black">
                         Upcoming Sessions
@@ -62,15 +60,13 @@ const Page = () => {
                         ))}
                     </div>
                 </section>
-
-                {/* Book Now */}
                 <section className="w-full flex flex-col items-center mt-5">
-                    {/* Desktop BookNow */}
+                   
                     <div className="hidden lg:flex w-full max-w-md">
                         <BookNow />
                     </div>
 
-                    {/* Mobile Schedule Button */}
+                    
                     <Link href="/doctors" className="w-full">
                         <div className="flex w-full">
                             <button
@@ -87,7 +83,6 @@ const Page = () => {
                 </section>
             </main>
 
-            {/* Mobile fixed Schedule Button */}
             <div className="lg:hidden fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 w-[90%]">
                 <Button />
             </div>
